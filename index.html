@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,32 +24,30 @@
     <title>Wallet</title>
 </head>
 <body onload='loadApp()'>
-    <h1 class="title">Calculate your budget</h1>
-    <div class="header">
-        <div class="budget">
-            
-            <div class="budget_title">
-                Available money
-            </div>
-            <div class="budget_value" id="budget">
-            </div>
-            <div class="budget_entry cleanStyle">
-                <div class="budget_entry--text">Income</div>
-                <div class="right">
-                    <div class="budget_entry--value" id="entry"></div>
-                    <div class="budget_entry--percentage">&nbsp;</div>
+    <div class="container-fluid header">            
+        <h1 class="title text-center">Calculate your budget</h1>
+        <div class="budget col col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-xs-12">
+                <div class="budget_title">
+                    Available money
                 </div>
-            </div>
-            <div class="budget_exit cleanStyle">
-                <div class="budget_exit--text">Expenditure</div>
-                <div class="right cleanStyle">
-                    <div class="budget_exit--value" id="exit"></div>
-                    <div class="budget_exit--percentage" id="percentage"></div>
+                <div class="budget_value" id="budget"></div>
+                <div class="budget_entry cleanStyle">
+                    <div class="budget_entry--text">Income</div>
+                    <div class="right">
+                        <div class="budget_entry--value" id="entry"></div>
+                        <div class="budget_entry--percentage">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="budget_exit cleanStyle">
+                    <div class="budget_exit--text">Expenditure</div>
+                    <div class="right cleanStyle">
+                        <div class="budget_exit--value" id="exit"></div>
+                        <div class="budget_exit--percentage" id="percentage"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <form id="form" onsubmit="return false;">
         <div class="add">
             <div class="add_container">
@@ -61,30 +62,32 @@
         </div>
     </form>
 
-    <div class="container cleanStyle">
-        <div class="entry">
-            <h2 class="entry_title">Incomes</h2>
-            <div id="entry-list">
-                <div class="element cleanStyle">
-                    <div class="element_description"></div>
-                    <div class="right cleanStyle">
-                        <div class="element_value"></div>
-                        <div class="element_remove">
-                            <button class="element_remove--btn"><i class="far fa-times-circle"></i></button>
+    <div class="container cleanStyle mt-5">
+        <div class="row">
+            <div class="entry col-lg-4 offset-lg-2 col-md-3 offset-md-3 col-sm-6 col-xs-12">
+                <h2 class="entry_title">Incomes</h2>
+                <div id="entry-list">
+                    <div class="element cleanStyle">
+                        <div class="element_description"></div>
+                        <div class="right cleanStyle">
+                            <div class="element_value"></div>
+                            <div class="element_remove">
+                                <button class="element_remove--btn"><i class="far fa-times-circle"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="exit">
-            <h2 class="exit_title">Expenditures</h2>
-            <div id="exit-list">
-                <div class="element cleanStyle">
-                    <div class="element_description"></div>
-                    <div class="right cleanStyle">
-                        <div class="element_value"></div>
-                        <div class="element_percentage"></div>
-                        <div class="element_remove"><button class="element_remove--btn"><i class="far fa-times-circle"></i></button></div>
+            <div class="exit col-lg-4 col-md-3 col-sm-6 col-xs-12">
+                <h2 class="exit_title">Expenditures</h2>
+                <div id="exit-list">
+                    <div class="element cleanStyle">
+                        <div class="element_description"></div>
+                        <div class="right cleanStyle">
+                            <div class="element_value"></div>
+                            <div class="element_percentage"></div>
+                            <div class="element_remove"><button class="element_remove--btn"><i class="far fa-times-circle"></i></button></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,5 +99,9 @@
     <script src="js/entry.js"></script>
     <script src="js/exit.js"></script>
     <script src="js/app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
